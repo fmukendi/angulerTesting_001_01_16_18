@@ -29,3 +29,15 @@ Run `ng github-pages:deploy` to deploy to GitHub Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+echo "# angulerTesting_001_01_16_18" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/fmukendi/angulerTesting_001_01_16_18.git
+git push -u origin master
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/fmukendi/angulerTesting_001_01_16_18.git
+git push -u origin master
