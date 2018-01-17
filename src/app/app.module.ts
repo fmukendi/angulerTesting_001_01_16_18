@@ -32,7 +32,8 @@ import { HighlightDirective } from './highlight.directive';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [], // providers here like TodoService will be a singleton 
+                 // meaning only one instance availble for entire application
   bootstrap: [AppComponent]
 })
 export class AppModule { }
