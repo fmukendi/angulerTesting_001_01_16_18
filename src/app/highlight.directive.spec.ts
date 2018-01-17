@@ -1,3 +1,4 @@
+import { DebugElement } from '@angular/core';
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HighlightDirective } from './highlight.directive';
@@ -26,5 +27,19 @@ describe('HighlightDirective', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DirectiveHostComponent);
     fixture.detectChanges(); 
+  });
+
+  it('it should highlight the first elemetn with cyan', () => {
+    let de = fixture.debugElement.queryAll(By.css('p'))[0];
+
+    expect(de.nativeElement.style.backgroundColor).toBe('cyan');
+  });
+
+  it('it should highlight the second element with the default color ', () => {
+    let de = fixture.debugElement.queryAll(By.css('p'))[1];
+    let directive = de.injector.get(HighlightDirective);
+    
+    // expect(de.nativeElement.style.backgroundColor).toBe('yellow');
+    expect(de.nativeElement.style.backgroundColor).toBe(directive.defaultColor);
   });
 });
